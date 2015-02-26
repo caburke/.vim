@@ -32,3 +32,6 @@ set noerrorbells
 
 set nobackup
 set noswapfile
+
+" Remap keys
+:imap ii <Esc>
