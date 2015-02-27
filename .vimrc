@@ -3,8 +3,48 @@ set nocompatible
 
 " Run pathogen and load files in .vim/bundle directory
 filetype off
-execute pathogen#infect()
+
+"""""""""""""""
+" Vundle Start
+"""""""""""""""
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+" Autopairs
+Plugin 'jiangmiao/auto-pairs'
+
+" Emmet
+Plugin 'mattn/emmet-vim'
+
+" Ultisnips
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+
 filetype plugin indent on
+
+""""""""""""""""
+" Vundle End
+""""""""""""""""
+
+" Markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Syntax highlighting
 syntax enable
@@ -35,3 +75,7 @@ set noswapfile
 
 " Remap keys
 :imap ii <Esc>
+
+" Markdown Settings
+let g:vim_markdown_math=1
+let g:vim_markdown_frontmatter=1
