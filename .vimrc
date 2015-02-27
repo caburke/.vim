@@ -12,6 +12,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+" Solarized Colorscheme
+Plugin 'altercation/vim-colors-solarized'
+
 " Autopairs
 Plugin 'jiangmiao/auto-pairs'
 
