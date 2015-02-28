@@ -1,1 +1,2 @@
+# Ignore pakcages, let Vundle download them
 /bundle/**
